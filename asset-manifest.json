@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.3605124f.js",
-    "static/js/787.24c3c129.chunk.js": "/static/js/787.24c3c129.chunk.js",
-    "index.html": "/index.html",
-    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.3605124f.js.map": "/static/js/main.3605124f.js.map",
-    "787.24c3c129.chunk.js.map": "/static/js/787.24c3c129.chunk.js.map"
+    "main.css": "/khs_coin_info_site.github.io/static/css/main.e6c13ad2.css",
+    "main.js": "/khs_coin_info_site.github.io/static/js/main.a14fa4b0.js",
+    "static/js/787.24c3c129.chunk.js": "/khs_coin_info_site.github.io/static/js/787.24c3c129.chunk.js",
+    "index.html": "/khs_coin_info_site.github.io/index.html",
+    "main.e6c13ad2.css.map": "/khs_coin_info_site.github.io/static/css/main.e6c13ad2.css.map",
+    "main.a14fa4b0.js.map": "/khs_coin_info_site.github.io/static/js/main.a14fa4b0.js.map",
+    "787.24c3c129.chunk.js.map": "/khs_coin_info_site.github.io/static/js/787.24c3c129.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.3605124f.js"
+    "static/js/main.a14fa4b0.js"
   ]
 }
