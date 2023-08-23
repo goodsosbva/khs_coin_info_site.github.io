@@ -36,9 +36,9 @@ const AnimatedContent = styled(Content)`
 const MoveProjectSignificance: React.FC = () => {
   const [currentLayoutIndex, setCurrentLayoutIndex] = useState(0);
 
-  const handleLayoutChange = (nextIndex: number) => {
-    setCurrentLayoutIndex(nextIndex);
-  };
+  // const handleLayoutChange = (nextIndex: number) => {
+  //   setCurrentLayoutIndex(nextIndex);
+  // };
 
   const handleNext = () => {
     if (currentLayoutIndex < layouts.length - 1) {
