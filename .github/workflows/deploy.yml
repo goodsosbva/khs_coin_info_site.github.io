@@ -26,6 +26,9 @@ jobs:
           npm install @fortawesome/react-fontawesome
           npm install @fortawesome/free-solid-svg-icons
 
+      - name: Install d3 library
+        run: npm install d3
+
       - name: Build website # 웹사이트를 빌드합니다.
         run: npm run build # 프로젝트에 맞는 빌드 스크립트로 수정해야 합니다.
 
