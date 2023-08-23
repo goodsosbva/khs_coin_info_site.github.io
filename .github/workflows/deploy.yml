@@ -13,18 +13,6 @@ jobs:
       - name: Checkout repository # 저장소를 체크아웃합니다.
         uses: actions/checkout@v2
 
-      - name: Start SSH agent
-        run: eval "$(ssh-agent -s)"
-
-      - name: Set up SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.FOR_DEPLOY_SECRET }}" > ~/.ssh/github
-          chmod 600 ~/.ssh/github
-
-      - name: Add SSH key to agent
-        run: ssh-add ~/.ssh/github
-
       - name: Setup Node.js # Node.js 환경을 설정합니다.
         uses: actions/setup-node@v2
         with:
