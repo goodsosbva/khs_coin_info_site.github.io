@@ -35,5 +35,5 @@ jobs:
       - name: Deploy to GitHub Pages # GitHub Pages로 배포합니다.
         uses: peaceiris/actions-gh-pages@v3 # GitHub Pages 배포용 액션을 사용합니다.
         with:
-          deploy_key: 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 # Secrets에서 가져온 배포 키를 사용합니다.
+          deploy_key: ${{ secrets.test_deploy }} # Secrets에서 가져온 배포 키를 사용합니다.
           publish_dir: ./build # 빌드된 정적 파일 경로로 수정해야 합니다.
