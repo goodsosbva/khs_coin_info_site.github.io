@@ -36,6 +36,6 @@ jobs:
         run: |
           git config --global user.name "khs"
           git config --global user.email "goodsosbva@naver.com"
-          git add ./build
+          git add -f ./build/
           git commit -m "Build and deploy"
           git push origin main
