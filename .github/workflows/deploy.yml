@@ -13,14 +13,17 @@ jobs:
       - name: Checkout repository # 저장소를 체크아웃합니다.
         uses: actions/checkout@v2
 
-      - name: Set up SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.FOR_DEPLOY_SECRET }}" > ~/.ssh/github
-          chmod 600 ~/.ssh/github
+        - name: Start SSH agent
+          run: eval "$(ssh-agent -s)"
 
-      - name: Add SSH key to agent
-        run: ssh-add ~/.ssh/github
+        - name: Set up SSH key
+          run: |
+            mkdir -p ~/.ssh
+            echo "${{ secrets.FOR_DEPLOY_SECRET }}" > ~/.ssh/github
+            chmod 600 ~/.ssh/github
+
+        - name: Add SSH key to agent
+            run: ssh-add ~/.ssh/github
 
       - name: Setup Node.js # Node.js 환경을 설정합니다.
         uses: actions/setup-node@v2
@@ -41,8 +44,9 @@ jobs:
       - name: Build website # 웹사이트를 빌드합니다.
         run: npm run build # 프로젝트에 맞는 빌드 스크립트로 수정해야 합니다.
 
-      - name: Deploy to GitHub Pages # GitHub Pages로 배포합니다.
-        uses: peaceiris/actions-gh-pages@v3 # GitHub Pages 배포용 액션을 사용합니다.
+    - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.FOR_DEPLOY_SECRET_SSH }} # Secrets에서 가져온 배포 키를 사용합니다.
-          publish_dir: ./build # 빌드된 정적 파일 경로로 수정해야 합니다.
+          deploy_key: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+
