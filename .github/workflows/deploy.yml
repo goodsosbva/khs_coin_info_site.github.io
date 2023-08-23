@@ -21,6 +21,11 @@ jobs:
       - name: Install dependencies # 프로젝트 의존성을 설치합니다.
         run: npm install # npm을 사용하여 의존성을 설치합니다.
 
+     - name: Install fontawesome packages
+        run: |
+          npm install @fortawesome/react-fontawesome
+          npm install @fortawesome/free-solid-svg-icons
+
       - name: Build website # 웹사이트를 빌드합니다.
         run: npm run build # 프로젝트에 맞는 빌드 스크립트로 수정해야 합니다.
 
